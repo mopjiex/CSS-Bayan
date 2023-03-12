@@ -1,7 +1,6 @@
-
 .container {
-  max-width: 1420px;
-  padding: 0 10px;
+  max-width: 88.75rem;
+  padding: 0 0.625rem;
   margin: 0 auto;
 }
 
@@ -13,38 +12,70 @@
   
 }
 
-.accordeon {
-  color: blue;
-  transition: all .3s;
-}
-
-.accordeon:hover {
-  color: #000;
-}
 .accordeon__header-img {
-  width: 24px;
-  height: 24px;
-  display: none;
-  transition: all .3s;
+  width: 1.5rem;
+  height: 1.5rem;
+
 }
 
-.accordeon:hover .accordeon__header-img {
-  display: block;
+@media(min-width: 300px) {
+  html {
+    font-size: 10px;
+  }
 }
 
+@media(min-width: 640px) {
+  html {
+    font-size: 12px;
+  }
+}
 
+@media(min-width: 800px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media(min-width: 1000px) {
+  html {
+    font-size: 15px;
+  }
+}
+
+@media(min-width: 1400px) {
+  html {
+    font-size: 16px;
+  }
+  .accordeon {
+    color: blue;
+    cursor: pointer;
+    transition: all .3s;
+  }
+
+  .accordeon:hover {
+    color: #000;
+  }
+
+  .accordeon__header-img {
+    display: none;
+    transition: all .3s;
+  }
+
+  .accordeon:hover .accordeon__header-img {
+    display: block;
+  }
+}
 
 .accordeon__item {
-  margin-bottom: 10px;
-  /* width: 25vw; */
-  border-radius: 8px;
-  font-size: 24px;
+  margin-bottom: 0.625rem;
+  border-radius: 0.5rem;
+  font-size: 1.5rem;
   background-color: #FFC300;
-  padding: 10px 0;
+  padding: 0.625rem 0;
 }
 
 .accordeon__header {
-  padding: 10px 20px;
+  padding: 0.625rem 1.25rem;
   cursor: pointer;
   display: flex;
   justify-content: space-between;
@@ -54,6 +85,12 @@
   overflow: hidden;
   max-height: 0;
   transition: max-height .3s ease-out;
+}
+
+.accordeon__image {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 .accordeon__item input[type="checkbox"] {
